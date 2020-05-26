@@ -1,0 +1,45 @@
+#!/bin/bash --login
+#
+#
+
+#BSUB -J thick_probe
+#BSUB -W 24:00
+#BSUB -n 400
+#BSUB -q regular
+
+#BSUB -e ./err.log
+#BSUB -o ./job.log
+
+#BSUB -x      # optional: exclusive job on host
+#BSUB -R "select[hname!='pal-hpc-bmem1']"
+#BSUB -R "select[hname!='pal-hpc-bmem2']"
+
+# Source scheduler environment
+. /gpfs3/applications/lsf/latest/conf/profile.lsf
+
+# Set up the environment
+module purge
+module load gnu/9.1.0 mvapich2 conda
+
+export SU2_RUN="/home/mad2pal/codes/su2_2019_update/bin"
+export SU2_HOME="/home/mad2pal/codes/su2_2019_update"
+export PATH=$SU2_RUN:$PATH
+export PYTHONPATH=$SU2_RUN:$PYTHONPATH
+
+# create the link for output file
+[ -f out_now.txt ] && rm -f out_now.txt
+ln -sf $LSB_JOBFILENAME.out ./out_now.txt
+
+SCRIPT="./shape_optimization.py"
+
+CONFIG_FILE="config.cfg"
+OPTIMIZER="CG"
+QUIET_MODE="False"
+
+# Run SU2
+CMD="${SCRIPT} -n ${LSB_DJOB_NUMPROC} -f ${CONFIG_FILE} -o ${OPTIMIZER} -q ${QUIET_MODE}"
+
+echo "Run command: $CMD"
+$CMD
+
+[ -f out_now.txt ] && rm -f out_now.txt

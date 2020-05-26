@@ -1,0 +1,10 @@
+pl '' u  1 w l title "RMS pressure",\
+   '' u  6 w l title "RMS progress variable",\
+   '' u  7 w l title "RMS enthalpy",\
+   '' u 10 w l title "RMS Y-CO",\
+   '' u 11 w l title "RMS Y-NO"
+
+while (1) {
+  pause 3
+  replot
+}
