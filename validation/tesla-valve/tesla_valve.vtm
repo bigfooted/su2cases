@@ -1,0 +1,19 @@
+<VTKFile type="vtkMultiBlockDataSet" version="1.0">
+<vtkMultiBlockDataSet>
+<Block name="Zone 0 (Incomp. Fluid)">
+<Block name="Internal">
+<DataSet name="Internal" file="tesla_valve/zone_0/Internal.vtu"/>
+</Block>
+<Block name="Boundary">
+<DataSet name="right" file="tesla_valve/zone_0/right.vtu"/>
+<DataSet name="left" file="tesla_valve/zone_0/left.vtu"/>
+<DataSet name="wall" file="tesla_valve/zone_0/wall.vtu"/>
+</Block>
+</Block>
+</vtkMultiBlockDataSet>
+<FieldData>
+<DataArray type='Float32' Name='TimeValue'>
+0
+</DataArray>
+</FieldData>
+</VTKFile>
