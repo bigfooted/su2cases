@@ -6,7 +6,7 @@ Point(2) = {0.5, -0, 0, dx};
 //+
 Point(3) = {0.5, 0.5, 0, dx};
 //+
-Point(4) = {0, 0.5, 0, dx};
+Point(4) = {0.05, 0.5, 0, dx};
 //+
 Line(1) = {1, 2};
 //+
@@ -48,7 +48,7 @@ Physical Curve("outlet") = {6};
 //+
 Physical Curve("wall_up") = {2, 7};
 //+
-Physical Curve("wall_down") = {1,5};
-//Physical Curve("wall_down_2") = {5};
+Physical Curve("wall_down_1") = {1};
+Physical Curve("wall_down_2") = {5};
 //+
 Physical Surface("interior") = {1, 2};

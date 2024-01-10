@@ -1,0 +1,12 @@
+
+SU2_CFD:768996 terminated with signal 11 at PC=55c6049d1d5a SP=7ffffc415c10.  Backtrace:
+/home/nijso/Codes/su2_github_develop/SU2/bin/SU2_CFD(+0x4b3d5a)[0x55c6049d1d5a]
+/home/nijso/Codes/su2_github_develop/SU2/bin/SU2_CFD(+0x4b5a68)[0x55c6049d3a68]
+/home/nijso/Codes/su2_github_develop/SU2/bin/SU2_CFD(+0x3fdc00)[0x55c60491bc00]
+/home/nijso/Codes/su2_github_develop/SU2/bin/SU2_CFD(+0x165ff9)[0x55c604683ff9]
+/home/nijso/Codes/su2_github_develop/SU2/bin/SU2_CFD(+0x1790b7)[0x55c6046970b7]
+/home/nijso/Codes/su2_github_develop/SU2/bin/SU2_CFD(+0x19a4b3)[0x55c6046b84b3]
+/home/nijso/Codes/su2_github_develop/SU2/bin/SU2_CFD(+0x11a3c5)[0x55c6046383c5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f42af418d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f42af418e40]
+/home/nijso/Codes/su2_github_develop/SU2/bin/SU2_CFD(+0x136f15)[0x55c604654f15]
